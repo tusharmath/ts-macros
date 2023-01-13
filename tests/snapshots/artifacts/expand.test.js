@@ -5,6 +5,7 @@ describe("Macro expand", () => {
     it("IIFE in expressions", () => {
         const arr = [1, 2, 3];
         (0, chai_1.expect)((() => {
+            ;
             arr.push(4);
             arr.push(5);
             return arr.push(6);
@@ -12,6 +13,7 @@ describe("Macro expand", () => {
     });
     it("Inlined in expression statements", () => {
         const arr = [1, 2, 3];
+        ;
         arr.push(1);
         arr.push(2);
         arr.push(3);
@@ -19,6 +21,9 @@ describe("Macro expand", () => {
     });
     it("Inlined in expressions", () => {
         const arr = [1, 2, 3];
-        (0, chai_1.expect)((arr.push(4), arr.push(5), arr.push(6))).to.be.equal(6);
+        (0, chai_1.expect)((() => {
+            ;
+            return (arr.push(4), arr.push(5), arr.push(6));
+        })()).to.be.equal(6);
     });
 });

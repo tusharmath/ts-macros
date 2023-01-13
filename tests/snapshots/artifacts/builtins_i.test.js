@@ -7,6 +7,9 @@ describe("$$i", () => {
         (0, chai_1.expect)(-1).to.be.equal(-1);
     });
     it("To be the index of repetitions", () => {
-        (0, chai_1.expect)("a0b1c2").to.be.equal("a0b1c2");
+        (0, chai_1.expect)((() => {
+            ;
+            return "a0b1c2";
+        })()).to.be.equal("a0b1c2");
     });
 });

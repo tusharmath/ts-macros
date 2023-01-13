@@ -9,7 +9,6 @@ describe("Block label marker", () => {
                 throw new Error("This shouldn't throw!");
             }
             catch (err) { }
-            ;
         }).to.not.throw();
     });
 });

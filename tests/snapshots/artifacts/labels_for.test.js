@@ -6,6 +6,7 @@ describe("For label marker", () => {
     it("To transpile to the correct statement", () => {
         const arr = [1, 3, 4, 5, 6];
         const arr2 = [];
+        ;
         let i = 2;
         let j = 10;
         while (i < arr.length) {
